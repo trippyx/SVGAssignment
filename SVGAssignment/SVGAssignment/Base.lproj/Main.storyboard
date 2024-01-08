@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f6A-FW-3WK">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Generate Dogs View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="SVGGenerateDogsViewController" id="BYZ-38-t0r" customClass="SVGGenerateDogsViewController" customModule="SVGAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XrA-yl-uiB">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="e8l-RZ-noq"/>
+                                    <constraint firstAttribute="width" constant="200" id="khy-xL-H3T"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oKM-gK-uIU">
+                                <rect key="frame" x="96.666666666666686" y="576" width="200" height="35"/>
+                                <color key="backgroundColor" red="0.25882352941176467" green="0.52549019607843139" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="a4e-yF-Yhs"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="generateNewImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34D-Vg-Lif"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="bHG-AM-Nbn">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bHG-AM-Nbn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AZc-5I-WzC"/>
+                            <constraint firstItem="XrA-yl-uiB" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NZo-SO-BzW"/>
+                            <constraint firstItem="oKM-gK-uIU" firstAttribute="top" secondItem="XrA-yl-uiB" secondAttribute="bottom" constant="50" id="gUq-30-qRE"/>
+                            <constraint firstItem="bHG-AM-Nbn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hic-QL-zwu"/>
+                            <constraint firstItem="XrA-yl-uiB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m6Q-6M-d4f"/>
+                            <constraint firstItem="oKM-gK-uIU" firstAttribute="centerX" secondItem="XrA-yl-uiB" secondAttribute="centerX" id="zyt-aP-JgM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="bHG-AM-Nbn" id="WQ3-NE-Rrh"/>
+                        <outlet property="generateButton" destination="oKM-gK-uIU" id="Nky-c2-9Uo"/>
+                        <outlet property="imageView" destination="XrA-yl-uiB" id="if8-7s-lBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192" y="-673"/>
+        </scene>
+        <!--Recently Generated View Controller-->
+        <scene sceneID="lTw-Ys-jmb">
+            <objects>
+                <viewController storyboardIdentifier="SVGRecentlyGeneratedViewController" id="HNK-QA-m2j" customClass="SVGRecentlyGeneratedViewController" customModule="SVGAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="juG-XH-GTA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lMW-rF-vD6">
+                                <rect key="frame" x="10" y="69" width="373" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="DeZ-AP-JTv"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Agd-uE-M82">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVm-u1-4gW">
+                                <rect key="frame" x="139.66666666666666" y="399" width="114" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YjX-oA-m2F"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear Dogs!"/>
+                                <connections>
+                                    <action selector="clearMyRecentlyViewed:" destination="HNK-QA-m2j" eventType="touchUpInside" id="vsf-7E-k0N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ShX-FM-Q3U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kVm-u1-4gW" firstAttribute="top" secondItem="lMW-rF-vD6" secondAttribute="bottom" constant="30" id="Arm-Mn-aeh"/>
+                            <constraint firstItem="lMW-rF-vD6" firstAttribute="top" secondItem="ShX-FM-Q3U" secondAttribute="top" constant="10" id="Coi-FW-1hn"/>
+                            <constraint firstItem="kVm-u1-4gW" firstAttribute="centerX" secondItem="juG-XH-GTA" secondAttribute="centerX" id="esC-ZA-C5b"/>
+                            <constraint firstItem="lMW-rF-vD6" firstAttribute="leading" secondItem="ShX-FM-Q3U" secondAttribute="leading" constant="10" id="f2Z-7a-FKR"/>
+                            <constraint firstItem="ShX-FM-Q3U" firstAttribute="trailing" secondItem="lMW-rF-vD6" secondAttribute="trailing" constant="10" id="jrb-yG-cba"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="clearMyRecentlyViewd" destination="kVm-u1-4gW" id="ZuY-DU-GIY"/>
+                        <outlet property="collectionView" destination="lMW-rF-vD6" id="ofa-m8-NkJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8FQ-0n-kZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902" y="-650"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="9Pi-9o-6nA">
+            <objects>
+                <viewController storyboardIdentifier="SVGMainViewController" id="YVF-NP-GqO" customClass="SVGMainViewController" customModule="SVGAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OP1-3f-atR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Random Dog Generator!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szh-A9-NKn">
+                                <rect key="frame" x="20" y="237" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fim-pv-905">
+                                <rect key="frame" x="100" y="408.66666666666669" width="193" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Generate Dogs!"/>
+                                <connections>
+                                    <action selector="generateDogsPushed:" destination="YVF-NP-GqO" eventType="touchUpInside" id="BiL-CR-X9Q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cD-OW-m56">
+                                <rect key="frame" x="71" y="453.66666666666669" width="252" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="My Recently Generated Dogs!"/>
+                                <connections>
+                                    <action selector="myRecentlyGeneratedDogs:" destination="YVF-NP-GqO" eventType="touchUpInside" id="wAj-jC-FOk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xCp-C2-mRc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xCp-C2-mRc" firstAttribute="trailing" secondItem="Szh-A9-NKn" secondAttribute="trailing" constant="20" id="7Go-z4-T4B"/>
+                            <constraint firstItem="Szh-A9-NKn" firstAttribute="leading" secondItem="xCp-C2-mRc" secondAttribute="leading" constant="20" id="Bc6-M4-IjL"/>
+                            <constraint firstItem="xCp-C2-mRc" firstAttribute="trailing" secondItem="fim-pv-905" secondAttribute="trailing" constant="100" id="K7J-gW-xuN"/>
+                            <constraint firstItem="Szh-A9-NKn" firstAttribute="centerX" secondItem="xCp-C2-mRc" secondAttribute="centerX" id="Toa-lc-3q5"/>
+                            <constraint firstItem="fim-pv-905" firstAttribute="leading" secondItem="xCp-C2-mRc" secondAttribute="leading" constant="100" id="Vq9-wn-ltc"/>
+                            <constraint firstItem="fim-pv-905" firstAttribute="centerX" secondItem="OP1-3f-atR" secondAttribute="centerX" id="W8N-7G-teS"/>
+                            <constraint firstItem="0cD-OW-m56" firstAttribute="top" secondItem="fim-pv-905" secondAttribute="bottom" constant="10" id="Zeb-Ba-CQs"/>
+                            <constraint firstItem="Szh-A9-NKn" firstAttribute="top" secondItem="xCp-C2-mRc" secondAttribute="top" constant="134" id="cs6-FX-1jM"/>
+                            <constraint firstItem="fim-pv-905" firstAttribute="centerY" secondItem="OP1-3f-atR" secondAttribute="centerY" id="fKC-P2-xIH"/>
+                            <constraint firstItem="xCp-C2-mRc" firstAttribute="trailing" secondItem="0cD-OW-m56" secondAttribute="trailing" constant="70" id="tjo-yv-K61"/>
+                            <constraint firstItem="0cD-OW-m56" firstAttribute="leading" secondItem="xCp-C2-mRc" secondAttribute="leading" constant="71" id="uGv-sH-5Ib"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cL7-Ch-4Ml"/>
+                    <connections>
+                        <outlet property="generateDogs" destination="fim-pv-905" id="esY-SY-yN0"/>
+                        <outlet property="recentlyGeneratedDogs" destination="0cD-OW-m56" id="IBD-8s-LsI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rpq-Vc-aVF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="463" y="-673"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dfX-ed-9LN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="f6A-FW-3WK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e2I-w0-fd4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="YVF-NP-GqO" kind="relationship" relationship="rootViewController" id="okf-zo-VZM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aff-Ma-EOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-440.45801526717554" y="-673.23943661971839"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
